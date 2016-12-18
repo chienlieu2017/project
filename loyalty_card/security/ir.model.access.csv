@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+card_type_access,card_type_access,model_card_type,group_loyalty_card_user,1,0,0,0
+card_type_manage,card_type_manage,model_card_type,group_loyalty_card_manager,1,1,1,1
+
+card_period_access,card_period_access,model_card_period,group_loyalty_card_user,1,0,0,0
+card_period_manage,card_period_manage,model_card_period,group_loyalty_card_manager,1,1,1,1
+
+card_history_access,card_history_access,model_card_history,group_loyalty_card_user,1,0,0,0
+card_history_manage,card_history_manage,model_card_history,group_loyalty_card_manager,1,1,1,1
+
+card_category_access,card_category_access,model_card_category,group_loyalty_card_user,1,0,0,0
+card_category_manage,card_category_manage,model_card_category,group_loyalty_card_manager,1,1,1,1
+
+card_card_access,card_card_access,model_card_card,group_loyalty_card_user,1,0,0,0
+card_card_manage,card_card_manage,model_card_card,group_loyalty_card_manager,1,1,1,1
