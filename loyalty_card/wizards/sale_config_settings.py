@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+##############################################################################
+#
+#    LEMME GROUP
+#
+##############################################################################
 
 from openerp import api, fields, models
 import openerp.addons.decimal_precision as dp

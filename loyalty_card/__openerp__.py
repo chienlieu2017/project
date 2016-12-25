@@ -25,6 +25,7 @@ Manage loyalty card
         # ============================================================
         # 'data/',
         'data/ir_sequence_data.xml',
+        'data/card_stage_data.xml',
 
         # ============================================================
         # VIEWS
@@ -37,6 +38,8 @@ Manage loyalty card
         # ============================================================
         # WIZARDS
         #=============================================================
+        'wizards/card_process_wizard.xml',
+        'wizards/create_card_wizard.xml',
         'wizards/sale_config_settings_view.xml',
 
         # ============================================================
@@ -47,7 +50,7 @@ Manage loyalty card
         # ============================================================
         # FUNCTION USED TO UPDATE DATA LIKE POST OBJECT
         # ============================================================
-        # "data/bluewave_update_functions_data.xml",
+        # "data/update_functions_data.xml",
     ],
 
     'test': [],

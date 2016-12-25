@@ -18,6 +18,7 @@
 							<group>
 								<field name="categ_id" widget='selection'/>
 								<field name="seq" />
+								<field name="issue_hard_card" />
 								<field name="active" required="True" />
 							</group>
 						</group>

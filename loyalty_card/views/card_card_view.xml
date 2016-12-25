@@ -6,6 +6,16 @@
 			<field name="model">card.card</field>
 			<field name="arch" type="xml">
 				<form string="Card">
+	            	<header>
+	            	    <!-- 
+						<button name="case_mark_won" string="Mark Won" type="object" class="oe_highlight"/>
+                        <button name="case_mark_lost" string="Mark Lost" type="object" class="oe_highlight"/>
+                        -->
+						<field name="state_id" widget="statusbar" clickable="True"
+							domain="[('usage', 'in', ('all', issue_hard_card and 'hard' or 'soft'))]"
+							options="{'fold_field': 'is_fold'}"
+							/>
+	            	</header>
 					<sheet>
 						<group col="2" string="Card">
 							<group>
@@ -16,6 +26,8 @@
 							<group>
 								<field name="point_in_period" readonly="1" />
 								<field name="total_point" readonly="1" />
+								<field name="issue_hard_card" />
+								<field name="is_expired" />
 							</group>
 						</group>
 						<group col="2" string="Dates">
@@ -48,9 +60,10 @@
 			<field name="name">view.card.card.list</field>
 			<field name="model">card.card</field>
 			<field name="arch" type="xml">
-				<tree string="Card">
+				<tree string="Card" default_order="name DESC">
 					<field name="name" />
 					<field name="type_id" />
+					<field name="state_id" />
 					<field name="partner_id" colspan="1" />
 					<field name="point_in_period" required="True" />
 					<field name="total_point" required="True" />
@@ -75,6 +88,8 @@
 					<group expand="0" string="Group By...">
 						<filter name="group_by_type" string="Type"
 							context="{'group_by':'type_id'}" />
+						<filter name="group_by_state" string="State"
+							context="{'group_by':'state_id'}" />
 						<filter name="group_by_partner" string="Customer"
 							context="{'group_by':'partner_id'}" />
 						<filter name="filter_by_expiry_date" string="Expiried Card"

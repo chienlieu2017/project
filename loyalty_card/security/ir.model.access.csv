@@ -13,3 +13,6 @@ card_category_manage,card_category_manage,model_card_category,group_loyalty_card
 
 card_card_access,card_card_access,model_card_card,group_loyalty_card_user,1,0,0,0
 card_card_manage,card_card_manage,model_card_card,group_loyalty_card_manager,1,1,1,1
+
+card_stage_access,card_stage_access,model_card_stage,,1,0,0,0
+card_stage_manage,card_stage_manage,model_card_stage,group_loyalty_card_manager,1,1,1,0

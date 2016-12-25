@@ -41,6 +41,9 @@ class CardType(models.Model):
         string='Sequence')
     note = fields.Text(
         string='Note')
+    issue_hard_card = fields.Boolean(
+        string='Is Issue Hard Card?',
+        default=False)
     active = fields.Boolean(
         string='Active?',
         default=True)
