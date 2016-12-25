@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    LEMME GROUP
+#    LEMME GROUP > amemberofuit@gmail.com
 #
 ##############################################################################
 
@@ -53,3 +53,12 @@ class CardType(models.Model):
          _('Name/Period/Category value has been existed!')),
         ('uniq_seq_categ', "unique(seq,categ_id)",
          _('Sequence/Category value has been existed!'))]
+
+    @api.multi
+    def name_get(self):
+        result = []
+        for r in self:
+            name = u"{} - {}".format(r.name, r.period_id.name)
+            result.append((r.id, name))
+        return result
+
